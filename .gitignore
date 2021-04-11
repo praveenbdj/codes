@@ -1,8 +1,35 @@
 # Compiled class file
 *.class
 
-# Log file
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+#Ignore local properties
+localconfig.properties
+test.properties
+
+#Ingore backups
+backup/
+*.bkp
+
+#Ignore logs
 *.log
+*.log*
 
 # BlueJ files
 *.ctxt

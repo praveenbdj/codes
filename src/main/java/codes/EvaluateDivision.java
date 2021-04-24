@@ -1,5 +1,7 @@
 package codes;
 
+import helper.JsonHelper;
+
 import java.util.*;
 
 //leetcode 399
@@ -27,20 +29,47 @@ public class EvaluateDivision {
     }
 
     private double bfs(Map<String, Map<String, Double>> adjMap, String u, String v) {
-        if (!adjMap.containsKey(u))
+        if (!adjMap.containsKey(u) || !adjMap.containsKey(v))
             return -1.0;
-        LinkedList<String> queue = new LinkedList<>();
-        Set<String> visited = new HashSet<>();
-        Map<String, String> parent = new HashMap<>();
+        Queue<String> queue = new LinkedList<>();
+        Map<String, Double> visitMap = new HashMap<>();
         queue.add(u);
-
-        while (queue.size() != 0) {
+        visitMap.put(u, 1.0);
+        while (!queue.isEmpty()) {
             String poll = queue.poll();
-            visited.add(poll);
-//            adjMap.get()
-
+            Double weight = visitMap.get(poll);
+            if (poll.equals(v)) {
+                return weight;
+            }
+            for (Map.Entry<String, Double> entry : adjMap.get(poll).entrySet()) {
+                if (!visitMap.containsKey(entry.getKey())) {
+                    queue.add(entry.getKey());
+                    visitMap.put(entry.getKey(), entry.getValue() * weight);
+                }
+            }
         }
-        return 0.0;
+
+        return -1.0;
+    }
+
+    public static void main(String[] args) {
+        List<List<String>> equations = new LinkedList<>();
+        equations.add(Arrays.asList("a", "b"));
+        equations.add(Arrays.asList("b", "c"));
+        double[] values = {2.0, 3.0};
+        List<List<String>> queries = new LinkedList<>();
+        queries.add(Arrays.asList("a", "c"));
+        queries.add(Arrays.asList("b", "a"));
+        queries.add(Arrays.asList("a", "e"));
+        queries.add(Arrays.asList("a", "a"));
+        queries.add(Arrays.asList("x", "x"));
+        System.out.println(
+                JsonHelper.serialize(
+                        new EvaluateDivision().calcEquation(
+                                equations, values, queries
+                        )
+                )
+        );
     }
 
 }

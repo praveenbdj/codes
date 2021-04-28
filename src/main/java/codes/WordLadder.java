@@ -6,7 +6,7 @@ import java.util.*;
 public class WordLadder {
 
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        if (beginWord.equals(endWord)) return 0;
+        if (beginWord.equals(endWord)) return 0; //this is not needed.
         Set<String> valid = new HashSet<>(wordList);
         return bfs(beginWord, endWord, valid);
     }

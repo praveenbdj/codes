@@ -1,6 +1,8 @@
 package codes;
 
-class MergeSortedLists {
+//this is not an optimal solution as it relies on the counter variables of each value.
+//It will fail for values with very dynamic range.
+class MergeKSortedListsUsingCounter {
     private static int OFFSET = 10000;
 
     public static class ListNode {

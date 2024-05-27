@@ -28,7 +28,7 @@ public class SearchInRotatedSortedArray {
     }
 
     //helps to find the pivot at which the array was rotated
-    private static int findPivot(int[] nums) {
+    public static int findPivot(int[] nums) {
         int start = 0, end = nums.length - 1;
         int ans = 0;
         while (start <= end) {

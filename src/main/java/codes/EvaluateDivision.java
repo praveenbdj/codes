@@ -1,6 +1,6 @@
 package codes;
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.*;
 
@@ -64,7 +64,7 @@ public class EvaluateDivision {
         queries.add(Arrays.asList("a", "a"));
         queries.add(Arrays.asList("x", "x"));
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         new EvaluateDivision().calcEquation(
                                 equations, values, queries
                         )

@@ -1,6 +1,6 @@
 package codes;
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +51,7 @@ public class GenerateParentheses {
     public static void main(String[] args) {
         GenerateParentheses generateParentheses = new GenerateParentheses();
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         generateParentheses.generateParenthesis(3)
                 )
         );

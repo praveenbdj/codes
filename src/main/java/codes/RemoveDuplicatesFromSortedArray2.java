@@ -1,6 +1,6 @@
 package codes;
 
-import helper.JsonHelper;
+import helper.Helper;
 
 //leetcode 80
 //https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
@@ -59,11 +59,11 @@ public class RemoveDuplicatesFromSortedArray2 {
         int[] nums = new int[]{1, 1, 1, 2, 2, 3};
         int k = removeDuplicates2(nums);
         System.out.println("K = " + k);
-        System.out.println(JsonHelper.serialize(nums));
+        System.out.println(Helper.serialize(nums));
         nums = new int[]{0, 0, 1, 1, 1, 1, 2, 3, 3};
         k = removeDuplicates2(nums);
         System.out.println("K = " + k);
-        System.out.println(JsonHelper.serialize(nums));
+        System.out.println(Helper.serialize(nums));
 
     }
 

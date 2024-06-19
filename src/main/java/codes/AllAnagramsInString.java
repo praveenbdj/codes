@@ -1,6 +1,6 @@
 package codes;
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -43,7 +43,7 @@ public class AllAnagramsInString {
     public static void main(String[] args) {
         AllAnagramsInString sol = new AllAnagramsInString();
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         sol.findAnagrams("abab", "ab")
                 )
         );

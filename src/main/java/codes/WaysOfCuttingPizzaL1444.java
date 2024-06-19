@@ -1,7 +1,7 @@
 package codes;
 
 
-import helper.JsonHelper;
+import helper.Helper;
 
 public class WaysOfCuttingPizzaL1444 {
 
@@ -34,7 +34,7 @@ public class WaysOfCuttingPizzaL1444 {
         }
 
         System.out.println(
-                JsonHelper.serialize(apples)
+                Helper.serialize(apples)
         );
 
         return

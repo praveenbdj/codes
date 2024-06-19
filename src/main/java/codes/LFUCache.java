@@ -1,7 +1,7 @@
 package codes;
 
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.*;
 
@@ -155,7 +155,7 @@ public class LFUCache {
 
         public void printOut() {
             if (list.size() > 0) {
-                System.out.println(JsonHelper.serialize(list.toArray()));
+                System.out.println(Helper.serialize(list.toArray()));
             }
         }
 

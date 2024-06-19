@@ -1,6 +1,6 @@
 package codes;
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.*;
 
@@ -57,7 +57,7 @@ public class AllPalindromePermutations {
 
     public static void main(String[] args) {
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         palPerms("abcba")
                 )
         );

@@ -1,7 +1,7 @@
 package codes;
 
 
-import helper.JsonHelper;
+import helper.Helper;
 
 public class DungeonGame {
 
@@ -30,7 +30,7 @@ public class DungeonGame {
                 if (min[i][j] > 0) min[i][j] = 0;
             }
         }
-        System.out.println(JsonHelper.serialize(min));
+        System.out.println(Helper.serialize(min));
         return min[0][0];
     }
 

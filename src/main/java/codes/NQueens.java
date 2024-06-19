@@ -1,6 +1,6 @@
 package codes;
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -71,7 +71,7 @@ public class NQueens {
 
     public static void main(String[] args) {
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         new NQueens().solveNQueens(4)
                 )
         );

@@ -1,7 +1,7 @@
 package codes;
 
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +28,7 @@ public class NextGreaterElement {
 
     public static void main(String[] args) {
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         new NextGreaterElement().nextGreaterElement(
                                 new int[]{4, 1, 2}, new int[]{1, 3, 4, 2}
                         )

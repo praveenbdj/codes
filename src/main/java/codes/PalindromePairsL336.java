@@ -1,7 +1,7 @@
 package codes;
 
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -88,7 +88,7 @@ public class PalindromePairsL336 {
     public static void main(String[] args) {
         PalindromePairsL336 pp = new PalindromePairsL336();
         List<List<Integer>> pairs = pp.palindromePairs(new String[]{"abcd", "dcba", "lls", "s", "sssll"});
-        pairs.forEach(x -> System.out.println(JsonHelper.serialize(x)));
+        pairs.forEach(x -> System.out.println(Helper.serialize(x)));
     }
 
 }

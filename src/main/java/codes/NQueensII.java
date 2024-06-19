@@ -1,10 +1,5 @@
 package codes;
 
-import helper.JsonHelper;
-
-import java.util.LinkedList;
-import java.util.List;
-
 //https://leetcode.com/problems/n-queens-ii/
 public class NQueensII {
 

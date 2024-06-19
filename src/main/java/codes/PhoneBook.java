@@ -1,7 +1,7 @@
 package codes;
 
 
-import helper.JsonHelper;
+import helper.Helper;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -71,17 +71,17 @@ public class PhoneBook {
         book.addWord("mohsin");
         book.addWord("praveen");
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         book.search("m").toArray()
                 )
         );
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         book.search("mohan").toArray()
                 )
         );
         System.out.println(
-                JsonHelper.serialize(
+                Helper.serialize(
                         book.search("pravee").toArray()
                 )
         );
